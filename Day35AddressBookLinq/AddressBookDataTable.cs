@@ -15,10 +15,10 @@ namespace Day35AddressBookLinq
         {
             addressBook.TableName = "AddressBook";
             //Adding FirstName ,LastName,Address,City,State,PhoneNumber and Email.
-            addressBook.Rows.Add("Manoj", "Thiparapu", "25-4-710", "Kazipet", "Telangana", "8106529025", "manojthiparapu@gmail.com");
-            addressBook.Rows.Add("Eren", "Jeager", "Shinsengumi", "Kazipet", "Attak on Titan", "7958977310", "erenjeager@gmail.com");
-            addressBook.Rows.Add("Sasuke", "Uchiha", "4-3-333", "Leaf Village", "Naruto", "9106529025", "schihasasuke@gmail.com");
-            addressBook.Rows.Add("Kamado", "Tanjiro", "mt Kumotori", "Okutama", "Telangana", "7578977310", "kamadoTanjiro@gmail.com");
+            addressBook.Rows.Add("Manoj", "Thiparapu", "25-4-710", "Kazipet", "Telangana", "8106529025", "manojthiparapu@gmail.com","Family");
+            addressBook.Rows.Add("Eren", "Jeager", "Shinsengumi", "Kazipet", "Attak on Titan", "7958977310", "erenjeager@gmail.com","Friend");
+            addressBook.Rows.Add("Sasuke", "Uchiha", "4-3-333", "Leaf Village", "Naruto", "9106529025", "schihasasuke@gmail.com","Friend");
+            addressBook.Rows.Add("Kamado", "Tanjiro", "mt Kumotori", "Okutama", "Telangana", "7578977310", "kamadoTanjiro@gmail.com","Family,Friend");
             Display(addressBook);
         }
 
@@ -179,7 +179,14 @@ namespace Day35AddressBookLinq
                     Console.WriteLine(string.Format("\n{0},{1},{2},{3},{4},{5},{6}", row[0], row[1], row[2], row[3], row[4], row[5], row[6]));
                 }
             }
-
+        }
+        //UC 9 Print Name and Relation Type
+        public void FamilyandFriend(DataTable add)
+        {
+            foreach(DataRow row in add.Rows)
+            {
+                Console.WriteLine("\n{0},{1}", row[0], row[7]);
+            }
         }
     }
 }
