@@ -25,7 +25,10 @@ namespace Day35AddressBookLinq
             adb.AddToTable(addressBook);
 
             //UC 4 Edit
-            adb.EditRecord(addressBook);
+            //adb.EditRecord(addressBook);
+
+            //UC 5 Delete
+            adb.DeleteRecords(addressBook);
 
         }
     }

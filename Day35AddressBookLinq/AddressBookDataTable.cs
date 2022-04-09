@@ -40,7 +40,7 @@ namespace Day35AddressBookLinq
         public void EditRecord(DataTable addressBook)
         {
 
-            Console.WriteLine("Enter a Name to Search");
+            Console.WriteLine("\nEnter a Name to Search");
             string fname = Console.ReadLine();
             foreach(DataRow row in addressBook.Rows)
             {
@@ -64,6 +64,26 @@ namespace Day35AddressBookLinq
                     addressBook.AcceptChanges();
                 }
             }
+            Console.WriteLine("\nDisplay AddressBook After Changes");
+
+            Display(addressBook);
+        }
+
+        //UC 5 Delete
+        public void DeleteRecords(DataTable addressBook)
+        {
+            Console.WriteLine("\nEnter a Name to Search");
+            string fname = Console.ReadLine();
+            for(int i = 0; i < addressBook.Rows.Count; i++)
+            {
+                DataRow dr =addressBook.Rows[i];
+                if (Convert.ToString(dr["FirstName"]) == fname)
+                {
+                    dr.Delete();
+                    addressBook.AcceptChanges();
+                }
+            }
+            Console.WriteLine("\nDisplay AddressBook After Changes");
             Display(addressBook);
         }
     }
