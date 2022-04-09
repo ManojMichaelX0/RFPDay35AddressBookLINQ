@@ -28,7 +28,7 @@ namespace Day35AddressBookLinq
             {
 
                 Console.WriteLine("\nFirst Name : " + row[0] + ", Last Name : " + row[1] + ", Address : " + row[2] + ", City : " + row[3] + ", State : " + row[4] +
-                    ", Phone Number : " + row[5] + ", Email : " + row[6]);
+                    ", Phone Number : " + row[5] + ", Email : " + row[6] +", RelationType : "+row[7]);
             }
         }
         //UC 4 
@@ -56,6 +56,7 @@ namespace Day35AddressBookLinq
                     row["PhoneNumber"] = Console.ReadLine();
                     Console.WriteLine("Enter Email");
                     row["Email"] = Console.ReadLine();
+                    row["RelationType"]=Console.ReadLine();
                     addressBook.AcceptChanges();
                 }
             }
@@ -97,7 +98,8 @@ namespace Day35AddressBookLinq
                     string state = row["State"].ToString();
                     string phno = row["PhoneNumber"].ToString();
                     string email = row["Email"].ToString();
-                    Console.WriteLine("person in " + city + " this city are : \n" + "First Name : " + fname + ", Last Name : " + lname + ", Address : " + address + ", City : " + city1 + ", State : " + state + ", PhoneNumeber : " + phno + ", Email : " + email);
+                    string relation = row["RelationType"].ToString();
+                    Console.WriteLine("person in " + city + " this city are : \n" + "First Name : " + fname + ", Last Name : " + lname + ", Address : " + address + ", City : " + city1 + ", State : " + state + ", PhoneNumeber : " + phno + ", Email : " + email+", RelationType : "+relation);
                 }
             }
             Console.WriteLine("\n Enter State to Search and Retrieve Records");
@@ -113,7 +115,8 @@ namespace Day35AddressBookLinq
                     string state2 = row1["State"].ToString();
                     string phno1 = row1["PhoneNumber"].ToString();
                     string email1 = row1["Email"].ToString();
-                    Console.WriteLine("person in " + state1 + " this State are : \n" + "First Name : " + fname1 + ", Last Name : " + lname1 + ", Address : " + address1 + ", City : " + city1 + ", State : " + state2 + ", PhoneNumeber : " + phno1 + ", Email : " + email1);
+                    string relation = row1["RelationType"].ToString();
+                    Console.WriteLine("person in " + state1 + " this State are : \n" + "First Name : " + fname1 + ", Last Name : " + lname1 + ", Address : " + address1 + ", City : " + city1 + ", State : " + state2 + ", PhoneNumeber : " + phno1 + ", Email : " + email1 + ", RelationType : " + relation);
                 }
             }
         }
@@ -187,6 +190,35 @@ namespace Day35AddressBookLinq
             {
                 Console.WriteLine("\n{0},{1}", row[0], row[7]);
             }
+        }
+
+        //UC 10 Count by Type
+        public void CountFamilyOrFriend(DataTable addressBook)
+        {
+            Console.WriteLine("\n Enter Friend to Search and Retrieve Records");
+            string friend = Console.ReadLine();
+            foreach (DataRow row in addressBook.Rows)
+            {
+                if (Convert.ToString(row["RelationType"]) == friend)
+                {
+                    numberOfRecordsCity = addressBook.AsEnumerable().Where(x => x["RelationType"].ToString() == friend).ToList().Count;
+
+                }
+
+            }
+            Console.WriteLine(numberOfRecordsCity);
+            Console.WriteLine("\n Enter Family or Family,Friend to Search and Retrieve Records");
+            string family = Console.ReadLine();
+            foreach (DataRow row in addressBook.Rows)
+            {
+                if (Convert.ToString(row["RelationType"]) == family)
+                {
+                    numberOfRecordsState = addressBook.AsEnumerable().Where(x => x["RelationType"].ToString() == family).ToList().Count;
+
+                }
+
+            }
+            Console.WriteLine(numberOfRecordsState);
         }
     }
 }
