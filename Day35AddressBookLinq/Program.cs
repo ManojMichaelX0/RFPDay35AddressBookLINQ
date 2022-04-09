@@ -8,6 +8,7 @@ namespace Day35AddressBookLinq
         static void Main(string[] args)
         {
             Console.WriteLine("Address Book Linq");
+            AddressBookDataTable adb= new AddressBookDataTable(); 
             //UC 1 and 2 Create Address Book DataTable
             DataTable addressBook = new DataTable();
             addressBook.TableName = "AddressBook";
@@ -18,6 +19,10 @@ namespace Day35AddressBookLinq
             addressBook.Columns.Add("State");
             addressBook.Columns.Add("Phone Number");
             addressBook.Columns.Add("Email");
+            Console.WriteLine("\nAddress Book Data Table Created");
+
+            //UC 3 Insert
+            adb.AddToTable(addressBook);
 
         }
     }

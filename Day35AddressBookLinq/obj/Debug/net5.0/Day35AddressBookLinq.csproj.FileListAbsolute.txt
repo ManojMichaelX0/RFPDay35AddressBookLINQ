@@ -1,0 +1,16 @@
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\bin\Debug\net5.0\Day35AddressBookLinq.exe
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\bin\Debug\net5.0\Day35AddressBookLinq.deps.json
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\bin\Debug\net5.0\Day35AddressBookLinq.runtimeconfig.json
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\bin\Debug\net5.0\Day35AddressBookLinq.runtimeconfig.dev.json
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\bin\Debug\net5.0\Day35AddressBookLinq.dll
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\bin\Debug\net5.0\Day35AddressBookLinq.pdb
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\Day35AddressBookLinq.csproj.AssemblyReference.cache
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\Day35AddressBookLinq.GeneratedMSBuildEditorConfig.editorconfig
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\Day35AddressBookLinq.AssemblyInfoInputs.cache
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\Day35AddressBookLinq.AssemblyInfo.cs
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\Day35AddressBookLinq.csproj.CoreCompileInputs.cache
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\Day35AddressBookLinq.dll
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\refint\Day35AddressBookLinq.dll
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\Day35AddressBookLinq.pdb
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\Day35AddressBookLinq.genruntimeconfig.cache
+D:\.net\Day35AddressBookLinq\Day35AddressBookLinq\obj\Debug\net5.0\ref\Day35AddressBookLinq.dll
